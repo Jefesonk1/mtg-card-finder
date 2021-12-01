@@ -6,6 +6,8 @@ import img from '../../fallback.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Inicial() {
+  console.log(history);
+
   const [card, setCard] = useState();
   const [cardName, setCardName] = useState();
 
