@@ -1,27 +1,16 @@
 import React, { useState } from 'react';
-import api from './services/api';
-import InformationCard from './InformationCard/InformationCard';
+import api from '../../services/api';
+import InformationCard from '../../components/InformationCard/InformationCard';
 import './styles.css';
-import img from './placeholder.jpg';
+import img from '../../fallback.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Inicial() {
   const [card, setCard] = useState();
   const [cardName, setCardName] = useState();
 
-  // useEffect(() => {
-  //   // api
-  //   //   .get("/cards/jefesonk1")
-  //   //   .then((response) => {setcard(response.data); console.log(response)})
-  //   //   .catch((err) => {
-  //   //     console.error("ops! ocorreu um erro" + err);
-  //   //   });
-  // }, []);
-
   function fetchApi(e) {
     e.preventDefault();
-    console.log(cardName);
-
     api
       .get(`/cards`, { params: { name: cardName, pageSize: 20 } })
       .then((response) => {
@@ -67,8 +56,6 @@ export default function Inicial() {
       ) : (
         ``
       )}
-
-      {/* <img src={card?.avatar_url} /> */}
     </>
   );
 }

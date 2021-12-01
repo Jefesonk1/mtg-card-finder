@@ -1,0 +1,21 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+body{
+  background-color: #2e2e2e ;
+  text-align: center;
+}
+
+body img {
+  filter: brightness(.8) contrast(1.2);
+}
+
+img {
+  margin-top: 10px;
+  max-width: 223px;
+  max-height: 310px;
+  border: 1px solid black;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
