@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import api from '../../services/api';
-import InformationCard from '../../components/InformationCard/InformationCard';
-import './styles.css';
-import img from '../../fallback.jpg';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
+import { GiCardRandom } from 'react-icons/gi';
+import api from '../../services/api';
+import InformationCard from '../../components/InformationCard/index';
+import img from '../../fallback.jpg';
+import './styles.css';
 
 export default function Inicial() {
   console.log(history);
@@ -26,13 +28,21 @@ export default function Inicial() {
 
   return (
     <>
-      <h1 id="title">
-        <span id="m">M</span>
-        <span id="a">a</span>
-        <span id="g">g</span>
-        <span id="i">i</span>
-        <span id="c">c</span>: The Gathering Card Finder
-      </h1>
+      <Link to="/formats" id="linkGameFormats">
+        <IconContext.Provider value={{ className: 'iconGameFormats' }}>
+          <GiCardRandom /> <span> View Game Formats </span>
+        </IconContext.Provider>
+      </Link>
+
+      <Link to="/" id="linkTitle">
+        <h1 id="title">
+          <span id="m">M</span>
+          <span id="a">a</span>
+          <span id="g">g</span>
+          <span id="i">i</span>
+          <span id="c">c</span>: The Gathering Card Finder
+        </h1>
+      </Link>
       <div id="wrapperFormDiv">
         <form onSubmit={fetchApi}>
           <label htmlFor="cardName">Card Name:</label>
@@ -40,6 +50,7 @@ export default function Inicial() {
             type="text"
             id="cardName"
             name="cardName"
+            placeholder="e.g black lotus"
             onChange={(e) => setCardName(e.target.value)}></input>
           <input id="btn" type="submit" value="Submit"></input>
         </form>

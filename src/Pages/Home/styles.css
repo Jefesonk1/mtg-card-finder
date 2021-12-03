@@ -1,6 +1,7 @@
 #title{
   margin-top: 40px;
   margin-bottom: 40px;
+  cursor: default
 }
 
 #m{
@@ -17,4 +18,59 @@
 }
 #c{
   color: #FFFCD6
+}
+
+#back{
+  display: flex;
+  width: 110px;
+  background-color: #434343 ;
+  border-radius: 8px;
+}
+
+#back .backIcon{
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  cursor: pointer
+}
+
+#back #backText{
+  align-self: center;
+  font-size: 24px;
+  cursor: pointer
+}
+
+#linkTitle{
+  text-decoration: none;
+}
+
+#linkTitle h1{
+ 
+  cursor: pointer;
+}
+
+#linkGameFormats{
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 220px;
+  height: 40px;
+}
+
+#linkGameFormats span:hover{
+  color: #AAE0FA;
+  transition: 0.3s;
+}
+
+#linkGameFormats span{
+  vertical-align: middle;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.iconGameFormats{
+  width: 28px;
+  height: 40px;
 }
