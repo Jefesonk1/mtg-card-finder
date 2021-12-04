@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 import img from '../../fallback.jpg';
 import getAssets from '../../assets/icons/index';
-import BackButton from '../../components/backButton';
+import BackButton from '../../components/BackButton';
 import Title from '../../components/Title';
 
 import './styles.css';

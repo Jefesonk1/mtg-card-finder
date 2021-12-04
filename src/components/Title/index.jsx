@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Tittle = () => {
+const Title = () => {
   return (
     <Link to="/" id="linkTitle">
       <h1 id="title">
@@ -15,4 +15,4 @@ const Tittle = () => {
     </Link>
   );
 };
-export default Tittle;
+export default Title;

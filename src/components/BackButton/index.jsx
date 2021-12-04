@@ -6,7 +6,7 @@ import './styles.css';
 
 const BackButton = () => {
   return (
-    <Link to="/" id="linkTitle">
+    <Link to="/" id="linkBackButton">
       <div id="back">
         <IconContext.Provider value={{ className: 'backIcon' }}>
           <AiOutlineArrowLeft /> <span id="backText">back</span>

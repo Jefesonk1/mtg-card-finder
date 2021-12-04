@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
-import BackButton from '../../components/backButton';
+import BackButton from '../../components/BackButton/index';
 import Title from '../../components/Title';
 import './styles.css';
 
@@ -11,7 +11,6 @@ const Formats = () => {
       .get(`/formats`)
       .then((response) => {
         setFormats(response.data.formats);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log('Ops! Ocorreu um erro!', err);
@@ -24,7 +23,7 @@ const Formats = () => {
       This is the list of game formats available
       <ul>
         {formats.map((elem) => (
-          <li key="elem">{elem}</li>
+          <li key={elem}>{elem}</li>
         ))}
       </ul>
       {}

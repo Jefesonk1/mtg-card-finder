@@ -16,3 +16,7 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+#linkBackButton{
+  text-decoration: none;
+}
